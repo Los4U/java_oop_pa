@@ -32,7 +32,7 @@ public abstract class MediaItem {
         this.lenght = lenght;
     }
 
-    abstract String displayLength();
+    protected abstract String displayLength();
 
     public int getInventoryNumber() {
         return inventoryNumber;
