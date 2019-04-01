@@ -47,7 +47,6 @@ class DataTest {
     void getMediaDatabase() {
         mediaDatabase = data.getMediaDatabase();
         assertEquals(3, mediaDatabase.size(), "Wrong emptydatabase size");
-
     }
 
     @Test
@@ -57,5 +56,14 @@ class DataTest {
         String message = managerController.addMediaItemToDatabase(mediaDatabase, mediaItemToAdd, manager);
         assertEquals(4,  data.getMediaDatabase().size());
         assertEquals(mediaItemToAdd.getTitle() + " added SUCSSESFULLY" , message);
+    }
+
+    @Test
+    @DisplayName("Test adding MediaItems to library by Manager NULL values")
+    void testAddingMediaItemsWithNULL() {
+        MediaItem mediaItemToAdd =  new Book(MediaType.BOOK, "Encyklopedia PWN", null, LocalDate.of(2011, 11, 4), 450, BookGenres.ENCYCLOPEDIA);
+        String message = managerController.addMediaItemToDatabase(mediaDatabase, mediaItemToAdd, manager);
+        assertEquals(3,  data.getMediaDatabase().size());
+        assertEquals("Check the submitted date, lack of something." , message);
     }
 }
