@@ -3,180 +3,184 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="723.0" y="812.0">data.Data</node>
-    <node x="970.0" y="789.5">model.Book</node>
-    <node x="806.0" y="0.0">model.Enums.LenghtType</node>
-    <node x="1689.6972727272728" y="459.5">model.Enums.AlbumGenres</node>
-    <node x="153.45833333333326" y="481.5">model.interfaces.Watchable</node>
-    <node x="418.0" y="779.0">model.User</node>
-    <node x="853.25" y="124.0">model.Enums.MediaType</node>
-    <node x="536.9501515151514" y="1128.5">controller.ManagerController</node>
-    <node x="0.0" y="789.5">model.Movie</node>
-    <node x="0.0" y="1339.0">model.interfaces.Readable</node>
-    <node x="309.95015151515145" y="1117.0">view.View</node>
-    <node x="1262.1228787878788" y="448.5">model.Enums.BookGenres</node>
-    <node x="15.458333333333258" y="459.5">model.Enums.MovieGenres</node>
-    <node x="1526.6972727272728" y="481.5">model.interfaces.Listenable</node>
-    <node x="688.2249999999999" y="326.0">model.MediaItem</node>
-    <node x="1375.0" y="789.5">model.Album</node>
-    <node x="474.45015151515145" y="1242.0">Main</node>
-    <node x="318.625" y="970.0">model.Manager</node>
+    <node x="828.0000000000001" y="731.0">data.Data</node>
+    <node x="423.0000000000001" y="731.0">model.Book</node>
+    <node x="1049.5000000000002" y="900.0">controller.UserController</node>
+    <node x="155.08333333333337" y="413.5">model.Enums.AlbumGenres</node>
+    <node x="1033.7500000000002" y="0.0">model.Enums.LenghtType</node>
+    <node x="1748.666666666667" y="446.5">model.interfaces.Watchable</node>
+    <node x="1106.5" y="698.0">model.User</node>
+    <node x="1295.75" y="1002.0">controller.ManagerController</node>
+    <node x="915.2500000000001" y="124.0">model.Enums.MediaType</node>
+    <node x="1436.25" y="731.0">model.Movie</node>
+    <node x="0.0" y="1168.0">model.interfaces.Readable</node>
+    <node x="1172.75" y="991.0">view.View</node>
+    <node x="498.3750000000001" y="402.5">model.Enums.BookGenres</node>
+    <node x="1611.666666666667" y="413.5">model.Enums.MovieGenres</node>
+    <node x="34.08333333333337" y="446.5">model.interfaces.Listenable</node>
+    <node x="907.5000000000001" y="325.0">model.MediaItem</node>
+    <node x="0.0" y="731.0">model.Album</node>
+    <node x="1278.679819563153" y="1093.0">Main</node>
+    <node x="1247.5" y="889.0">model.Manager</node>
   </nodes>
   <notes />
   <edges>
     <edge source="model.Movie" target="model.interfaces.Watchable">
-      <point x="33.08333333333334" y="-60.0" />
-      <point x="231.58333333333337" y="759.0" />
-      <point x="219.95833333333326" y="759.0" />
-      <point x="0.0" y="26.0" />
+      <point x="165.41666666666669" y="-37.5" />
+      <point x="0.0" y="15.0" />
     </edge>
     <edge source="model.Book" target="model.Enums.BookGenres">
-      <point x="154.0" y="-60.0" />
-      <point x="1316.5" y="759.0" />
-      <point x="1352.8728787878788" y="759.0" />
+      <point x="0.0" y="-37.5" />
+      <point x="615.5000000000001" y="618.0" />
+      <point x="589.1250000000001" y="618.0" />
       <point x="30.25" y="59.0" />
     </edge>
     <edge source="model.Enums.MediaType" target="model.Enums.LenghtType">
-      <point x="50.0" y="-71.0" />
-      <point x="1003.25" y="104.0" />
-      <point x="923.25" y="104.0" />
-      <point x="50.25" y="37.0" />
+      <point x="-51.5" y="-70.5" />
+      <point x="966.7500000000001" y="99.0" />
+      <point x="1050.5000000000002" y="99.0" />
+      <point x="-50.25" y="37.0" />
     </edge>
     <edge source="controller.ManagerController" target="model.MediaItem">
-      <point x="113.75" y="-26.0" />
-      <point x="878.2001515151514" y="1092.0" />
-      <point x="959.5" y="1092.0" />
-      <point x="959.5" y="749.0" />
-      <point x="892.6795454545454" y="749.0" />
-      <point x="31.454545454545496" y="181.5" />
+      <point x="37.0" y="-15.0" />
+      <point x="1406.75" y="966.0" />
+      <point x="1425.75" y="966.0" />
+      <point x="1425.75" y="648.0" />
+      <point x="1186.9615384615386" y="648.0" />
+      <point x="106.46153846153845" y="136.5" />
+    </edge>
+    <edge source="controller.UserController" target="model.MediaItem">
+      <point x="-31.0" y="-15.0" />
+      <point x="0.0" y="136.5" />
     </edge>
     <edge source="model.MediaItem" target="model.Enums.MediaType">
-      <point x="43.25" y="-181.5" />
-      <point x="904.4749999999999" y="306.0" />
-      <point x="913.25" y="306.0" />
-      <point x="-40.0" y="71.0" />
+      <point x="-43.25" y="-136.5" />
+      <point x="1037.25" y="305.0" />
+      <point x="1059.45" y="305.0" />
+      <point x="41.19999999999993" y="70.5" />
     </edge>
     <edge source="model.Album" target="model.interfaces.Listenable">
-      <point x="33.58333333333326" y="-60.0" />
-      <point x="1610.0833333333333" y="759.0" />
-      <point x="1598.1972727272728" y="759.0" />
-      <point x="0.0" y="26.0" />
+      <point x="-100.75" y="-37.5" />
+      <point x="100.75" y="678.0" />
+      <point x="84.58333333333337" y="678.0" />
+      <point x="0.0" y="15.0" />
     </edge>
     <edge source="model.Manager" target="model.MediaItem">
-      <point x="-134.0" y="-48.5" />
-      <point x="385.625" y="945.0" />
-      <point x="407.5" y="945.0" />
-      <point x="407.5" y="739.0" />
-      <point x="766.8613636363635" y="739.0" />
-      <point x="-94.36363636363637" y="181.5" />
+      <point x="52.0" y="-26.0" />
+      <point x="1377.5" y="864.0" />
+      <point x="1402.0" y="864.0" />
+      <point x="1402.0" y="658.0" />
+      <point x="1160.346153846154" y="658.0" />
+      <point x="79.84615384615392" y="136.5" />
     </edge>
     <edge source="model.Album" target="model.Enums.MediaType">
-      <point x="-33.58333333333326" y="-60.0" />
-      <point x="1542.9166666666667" y="759.0" />
-      <point x="1516.1972727272728" y="759.0" />
-      <point x="1516.1972727272728" y="286.0" />
-      <point x="1033.25" y="286.0" />
-      <point x="80.0" y="71.0" />
+      <point x="-167.91666666666674" y="-37.5" />
+      <point x="33.58333333333326" y="678.0" />
+      <point x="23.58333333333337" y="678.0" />
+      <point x="23.58333333333337" y="285.0" />
+      <point x="935.8500000000001" y="285.0" />
+      <point x="-82.39999999999998" y="70.5" />
     </edge>
     <edge source="model.Book" target="model.MediaItem">
-      <point x="-77.0" y="-60.0" />
-      <point x="1085.5" y="729.0" />
-      <point x="955.5886363636362" y="729.0" />
-      <point x="94.36363636363626" y="181.5" />
+      <point x="77.0" y="-37.5" />
+      <point x="692.5000000000001" y="648.0" />
+      <point x="974.0384615384617" y="648.0" />
+      <point x="-106.46153846153845" y="136.5" />
     </edge>
     <edge source="model.Movie" target="model.Enums.MovieGenres">
-      <point x="-165.41666666666669" y="-60.0" />
-      <point x="33.08333333333337" y="759.0" />
-      <point x="44.70833333333326" y="759.0" />
-      <point x="-29.25" y="48.0" />
+      <point x="99.25" y="-37.5" />
+      <point x="1734.0" y="678.0" />
+      <point x="1699.416666666667" y="678.0" />
+      <point x="29.25" y="48.0" />
     </edge>
     <edge source="model.MediaItem" target="model.Enums.LenghtType">
-      <point x="-43.25" y="-181.5" />
-      <point x="817.9749999999999" y="296.0" />
-      <point x="809.9699999999999" y="296.0" />
-      <point x="809.9699999999999" y="104.0" />
-      <point x="856.25" y="104.0" />
-      <point x="-16.75" y="37.0" />
-    </edge>
-    <edge source="model.Album" target="model.Enums.AlbumGenres">
-      <point x="100.75" y="-60.0" />
-      <point x="1677.25" y="759.0" />
-      <point x="1719.6972727272728" y="759.0" />
-      <point x="-30.0" y="48.0" />
+      <point x="129.75" y="-136.5" />
+      <point x="1210.25" y="305.0" />
+      <point x="1146.8701566951568" y="305.0" />
+      <point x="1146.8701566951568" y="99.0" />
+      <point x="1151.0000000000002" y="99.0" />
+      <point x="50.25" y="37.0" />
     </edge>
     <edge source="model.Movie" target="model.Enums.MediaType">
-      <point x="-33.08333333333337" y="-60.0" />
-      <point x="165.41666666666663" y="759.0" />
-      <point x="142.95833333333326" y="759.0" />
-      <point x="142.95833333333326" y="306.0" />
-      <point x="873.25" y="306.0" />
-      <point x="-80.0" y="71.0" />
+      <point x="-33.08333333333337" y="-37.5" />
+      <point x="1601.166666666667" y="295.0" />
+      <point x="1100.65" y="295.0" />
+      <point x="82.39999999999998" y="70.5" />
     </edge>
-    <edge source="model.Manager" target="model.User">
-      <point x="134.0" y="-48.5" />
-      <point x="653.625" y="945.0" />
-      <point x="631.75" y="945.0" />
-      <point x="71.25" y="70.5" />
+    <edge source="model.Album" target="model.Enums.AlbumGenres">
+      <point x="33.58333333333326" y="-37.5" />
+      <point x="235.08333333333326" y="678.0" />
+      <point x="245.08333333333337" y="678.0" />
+      <point x="30.0" y="48.0" />
     </edge>
     <edge source="model.Album" target="model.MediaItem">
-      <point x="-167.91666666666674" y="-60.0" />
-      <point x="1408.5833333333333" y="719.0" />
-      <point x="987.0431818181817" y="719.0" />
-      <point x="125.81818181818176" y="181.5" />
+      <point x="167.91666666666674" y="-37.5" />
+      <point x="369.41666666666674" y="638.0" />
+      <point x="947.423076923077" y="638.0" />
+      <point x="-133.0769230769231" y="136.5" />
+    </edge>
+    <edge source="model.Manager" target="model.User">
+      <point x="-52.0" y="-26.0" />
+      <point x="1273.5" y="864.0" />
+      <point x="1249.0" y="864.0" />
+      <point x="0.0" y="70.5" />
     </edge>
     <edge source="model.Movie" target="model.MediaItem">
-      <point x="99.25" y="-60.0" />
-      <point x="297.75" y="719.0" />
-      <point x="703.9522727272727" y="719.0" />
-      <point x="-157.27272727272725" y="181.5" />
+      <point x="-165.41666666666669" y="-37.5" />
+      <point x="1469.3333333333335" y="638.0" />
+      <point x="1213.5769230769233" y="638.0" />
+      <point x="133.0769230769232" y="136.5" />
     </edge>
     <edge source="Main" target="controller.ManagerController">
-      <point x="62.625" y="-26.0" />
-      <point x="620.5751515151514" y="1222.0" />
-      <point x="878.2001515151514" y="1222.0" />
-      <point x="113.75" y="26.0" />
+      <point x="9.375" y="-15.0" />
+      <point x="1325.554819563153" y="1073.0" />
+      <point x="1332.75" y="1073.0" />
+      <point x="-37.0" y="15.0" />
     </edge>
     <edge source="controller.ManagerController" target="model.Manager">
-      <point x="-113.75" y="-26.0" />
-      <point x="650.7001515151514" y="1092.0" />
-      <point x="519.625" y="1092.0" />
-      <point x="0.0" y="48.5" />
+      <point x="-37.0" y="-15.0" />
+      <point x="1332.75" y="966.0" />
+      <point x="1325.5" y="966.0" />
+      <point x="0.0" y="26.0" />
     </edge>
     <edge source="model.User" target="model.MediaItem">
-      <point x="0.0" y="-70.5" />
-      <point x="560.5" y="749.0" />
-      <point x="798.315909090909" y="749.0" />
-      <point x="-62.90909090909088" y="181.5" />
+      <point x="71.25" y="-70.5" />
+      <point x="1320.25" y="668.0" />
+      <point x="1133.7307692307695" y="668.0" />
+      <point x="53.23076923076928" y="136.5" />
     </edge>
     <edge source="model.Book" target="model.Enums.MediaType">
-      <point x="0.0" y="-60.0" />
-      <point x="1162.5" y="759.0" />
-      <point x="1188.875" y="759.0" />
-      <point x="1188.875" y="296.0" />
-      <point x="993.25" y="296.0" />
-      <point x="40.0" y="71.0" />
+      <point x="-154.0" y="-37.5" />
+      <point x="461.5000000000001" y="618.0" />
+      <point x="465.9250474833809" y="618.0" />
+      <point x="465.9250474833809" y="295.0" />
+      <point x="977.0500000000001" y="295.0" />
+      <point x="-41.200000000000045" y="70.5" />
     </edge>
     <edge source="data.Data" target="model.MediaItem">
-      <point x="56.5" y="-37.5" />
-      <point x="892.5" y="759.0" />
-      <point x="861.2249999999999" y="759.0" />
-      <point x="0.0" y="181.5" />
+      <point x="60.5" y="-37.5" />
+      <point x="1009.5000000000001" y="678.0" />
+      <point x="1053.8846153846155" y="678.0" />
+      <point x="-26.61538461538464" y="136.5" />
+    </edge>
+    <edge source="controller.UserController" target="model.User">
+      <point x="31.0" y="-15.0" />
+      <point x="1142.5000000000002" y="864.0" />
+      <point x="1154.0" y="864.0" />
+      <point x="-95.0" y="70.5" />
     </edge>
     <edge source="Main" target="view.View">
-      <point x="-62.625" y="-26.0" />
-      <point x="495.32515151515145" y="1222.0" />
-      <point x="361.70015151515145" y="1222.0" />
-      <point x="-51.75" y="37.5" />
+      <point x="-9.375" y="-15.0" />
+      <point x="1306.804819563153" y="1063.0" />
+      <point x="1250.0" y="1063.0" />
+      <point x="25.75" y="26.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="861.0" y="649.5" />
+  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="280.00000000000045" y="499.0000000000001" />
   <SelectedNodes />
   <Categories>
     <Category>Fields</Category>
-    <Category>Properties</Category>
-    <Category>Inner Classes</Category>
     <Category>Constructors</Category>
-    <Category>Methods</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
