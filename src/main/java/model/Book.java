@@ -1,4 +1,23 @@
 package model;
 
-public class Book {
+import model.Enums.MediaType;
+
+import java.io.IOException;
+import java.nio.CharBuffer;
+import java.time.LocalDate;
+
+public class Book extends MediaItem implements Readable{
+    public Book(MediaType mediaType, String title, String author, LocalDate releaseDate, int lenght) {
+        super(mediaType, title, author, releaseDate, lenght);
+    }
+
+    @Override
+    public int read(CharBuffer cb) throws IOException {
+        return 0;
+    }
+
+    @Override
+    protected String displayLength() {
+        return null;
+    }
 }
