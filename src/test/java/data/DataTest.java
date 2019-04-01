@@ -1,6 +1,7 @@
 package data;
 
 import controller.ManagerController;
+import controller.UserController;
 import model.*;
 import model.Enums.AlbumGenres;
 import model.Enums.BookGenres;
@@ -22,6 +23,7 @@ class DataTest {
     private Manager manager;
     private User user;
     private ManagerController managerController;
+    private UserController userController;
     private List<MediaItem> mediaDatabase = data.getMediaDatabase();
 
     private MediaItem book = new Book(MediaType.BOOK,"Muminki" ,"Astrid Lindgren" , LocalDate.of(1985, 1 , 1 ),  33, BookGenres.NOVEL );
@@ -38,6 +40,7 @@ class DataTest {
         manager = new Manager("Matheo");
         user = new User("Bob");
         managerController =  new ManagerController();
+        userController =  new UserController();
     }
 
     @AfterEach
@@ -96,10 +99,11 @@ class DataTest {
 
 
     @Test
-    @DisplayName("Test of rent the mediItems from the librabry by the User")
+    @DisplayName("Test of RENT the mediItems from the librabry by the User")
     public void testOfrentingMediaItem(){
         int inventoryNumberOfMediaItemToRent = 2;
         String message = userController.rentMediaItemByInventoryNumber(mediaDatabase, inventoryNumberOfMediaItemToRent, user);
+        assertEquals(1, user.getRentedMediaItems().size());
 
     }
 
