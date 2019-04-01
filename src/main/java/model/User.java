@@ -30,9 +30,9 @@ public class User {
                     if(mediaItem.getAvalability() == true){
                         mediaItem.setAvalability(false);
                         rentedMediaItems.add(mediaItem);
-                        return mediaItem.getTitle() + " ok";
+                        return mediaItem.getTitle() + " rented SUCCESFULLY";
                     }else{
-                        return mediaItem.getTitle() + " NOTok";
+                        return mediaItem.getTitle() + " NOT AVAILABLE AT THIS MOMENT";
                     }
                 }
             }
