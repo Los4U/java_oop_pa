@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class User {
@@ -9,7 +10,11 @@ public class User {
         private String name;
         private int userId;
 
-        ArrayList<MediaItem> rentedMediaItems;
+    public ArrayList<MediaItem> getRentedMediaItems() {
+        return rentedMediaItems;
+    }
+
+    ArrayList<MediaItem> rentedMediaItems;
 
         public User(String name) {
             this.name = name;
@@ -17,4 +22,22 @@ public class User {
             rentedMediaItems =  new ArrayList<>();
         }
 
+    public String rentMediaItem(List<MediaItem> mediaDatabase, int inventoryNumberOfMediaItemToRent){
+        if(inventoryNumberOfMediaItemToRent >= 1 || inventoryNumberOfMediaItemToRent < mediaDatabase.size()){
+
+            for(MediaItem mediaItem: mediaDatabase){
+                if(mediaItem.getInventoryNumber() == inventoryNumberOfMediaItemToRent){
+                    if(mediaItem.getAvalability() == true){
+                        mediaItem.setAvalability(false);
+                        rentedMediaItems.add(mediaItem);
+                        return mediaItem.getTitle() + " ok";
+                    }else{
+                        return mediaItem.getTitle() + " NOTok";
+                    }
+                }
+            }
+            return "No mediaItem in database";
+        }
+        return "Bad inventory number";
+    }
 }
