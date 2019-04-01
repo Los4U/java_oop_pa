@@ -30,6 +30,7 @@ class DataTest {
 
     @BeforeEach
     void setUp() {
+        mediaDatabase.clear();
         mediaDatabase.add(book);
         mediaDatabase.add(album);
         mediaDatabase.add(itemThatWillBeRemoved);
@@ -40,6 +41,7 @@ class DataTest {
 
     @AfterEach
     void tearDown() {
+        MediaItem.counter = 0;
     }
 
     @Test
@@ -71,8 +73,35 @@ class DataTest {
     @DisplayName("Test deleting mediaItem by manager from database")
     public void removeItemFromMediatheq() {
         int itemNumberThatWillBeRemoved = 3;
+        showAllDatabase(mediaDatabase);
         String message = managerController.removeMediaItemFromDatabase(mediaDatabase, itemNumberThatWillBeRemoved, manager);
+        showAllDatabase(mediaDatabase);
+
         assertEquals(2, mediaDatabase.size() , "NO");
+        assertEquals(itemThatWillBeRemoved.getTitle() + " removed SUCSSESFULLY", message , "NO");
+    }
+
+    @Test
+    @DisplayName("Test deleting mediaItem by manager from database _BAD_ID")
+    public void removeItemFromMediatheq_BAD_ID() {
+        int itemNumberThatWillBeRemoved = 14;
+        showAllDatabase(mediaDatabase);
+        String message = managerController.removeMediaItemFromDatabase(mediaDatabase, itemNumberThatWillBeRemoved, manager);
+        showAllDatabase(mediaDatabase);
+
+        assertEquals(3, mediaDatabase.size() , "Wrong database size");
+
+    }
+
+
+
+
+
+    private void showAllDatabase(List<MediaItem> mediaDatabase){
+        System.out.println("------------------------------");
+        for(MediaItem mediaItem: mediaDatabase){
+            System.out.println(mediaItem.toString());
+        }
     }
 
 
