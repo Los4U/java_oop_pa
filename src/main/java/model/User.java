@@ -40,4 +40,9 @@ public class User {
         }
         return "Bad inventory number";
     }
+
+    public String returnMediaItemByInventoryNumber(List<MediaItem> mediaDatabase, int inventoryNumberOfMediaItemToReturn) {
+
+            return "";
+    }
 }

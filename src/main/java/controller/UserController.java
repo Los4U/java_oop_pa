@@ -10,4 +10,8 @@ public class UserController {
         return user.rentMediaItem(mediaDatabase, inventoryNumberOfMediaItemToRent);
 
     }
+
+    public String returnMediaItemByInventoryNumber(List<MediaItem> mediaDatabase, int inventoryNumberOfMediaItemToReturn, User user) {
+        return user.returnMediaItemByInventoryNumber(mediaDatabase, inventoryNumberOfMediaItemToReturn );
+    }
 }
