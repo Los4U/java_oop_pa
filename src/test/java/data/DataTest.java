@@ -114,13 +114,10 @@ class DataTest {
     @Test
     @DisplayName("Test of RETURNING the mediItems to the librabry by the User")
     public void testOfreturningMediaItem(){
-        int inventoryNumberOfMediaItemToRent = 2;
+        int inventoryNumberOfMediaItemToReturn = 2;
         showAllDatabase(mediaDatabase);
-        String message = userController.rentMediaItemByInventoryNumber(mediaDatabase, inventoryNumberOfMediaItemToRent, user);
-        showAllDatabase(mediaDatabase);
-        showAllDatabase(user.getRentedMediaItems());
-        assertEquals(1, user.getRentedMediaItems().size());
-        assertEquals("Home by the sea mum rented SUCCESFULLY", message, "renting error");
+        String message = userController.returnMediaItemByInventoryNumber(mediaDatabase, inventoryNumberOfMediaItemToReturn, user);
+
 
     }
 
