@@ -36,6 +36,7 @@ class DataTest {
         mediaDatabase.add(itemThatWillBeRemoved);
 
         manager = new Manager("Matheo");
+        user = new User("Bob");
         managerController =  new ManagerController();
     }
 
@@ -92,6 +93,17 @@ class DataTest {
         assertEquals(3, mediaDatabase.size() , "Wrong database size");
 
     }
+
+
+    @Test
+    @DisplayName("Test of rent the mediItems from the librabry by the User")
+    public void testOfrentingMediaItem(){
+        int inventoryNumberOfMediaItemToRent = 2;
+        String message = userController.rentMediaItemByInventoryNumber(mediaDatabase, inventoryNumberOfMediaItemToRent, user);
+
+    }
+
+
 
 
 
