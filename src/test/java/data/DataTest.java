@@ -54,7 +54,8 @@ class DataTest {
     @DisplayName("Test adding MediaItems to library by Manager")
     void testAddingProperMediaItems() {
         MediaItem mediaItemToAdd =  new Book(MediaType.BOOK, "Encyklopedia PWN", "PWN", LocalDate.of(2011, 11, 4), 450, BookGenres.ENCYCLOPEDIA);
-        managerController.addMediaItemToDatabase(mediaDatabase, mediaItemToAdd, manager);
+        String message = managerController.addMediaItemToDatabase(mediaDatabase, mediaItemToAdd, manager);
         assertEquals(4,  data.getMediaDatabase().size());
+        assertEquals(mediaItemToAdd.getTitle() + " added SUCSSESFULLY" , message);
     }
 }
