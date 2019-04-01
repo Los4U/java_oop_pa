@@ -49,14 +49,14 @@ class DataTest {
     }
 
     @Test
-    @DisplayName("Test database, is it return correct size")
+    @DisplayName("Test DATABASE, is it return correct size")
     void getMediaDatabase() {
         mediaDatabase = data.getMediaDatabase();
         assertEquals(3, mediaDatabase.size(), "Wrong emptydatabase size");
     }
 
     @Test
-    @DisplayName("Test adding MediaItems to library by Manager")
+    @DisplayName("Test ADDING MediaItems to library by Manager")
     void testAddingProperMediaItems() {
         MediaItem mediaItemToAdd =  new Book(MediaType.BOOK, "Encyklopedia PWN", "PWN", LocalDate.of(2011, 11, 4), 450, BookGenres.ENCYCLOPEDIA);
         String message = managerController.addMediaItemToDatabase(mediaDatabase, mediaItemToAdd, manager);
@@ -65,7 +65,7 @@ class DataTest {
     }
 
     @Test
-    @DisplayName("Test adding MediaItems to library by Manager NULL values")
+    @DisplayName("Test ADDING MediaItems to library by Manager NULL values")
     void testAddingMediaItemsWithNULL() {
         MediaItem mediaItemToAdd =  new Book(MediaType.BOOK, "Encyklopedia PWN", null, LocalDate.of(2011, 11, 4), 450, BookGenres.ENCYCLOPEDIA);
         String message = managerController.addMediaItemToDatabase(mediaDatabase, mediaItemToAdd, manager);
@@ -74,7 +74,7 @@ class DataTest {
     }
 
     @Test
-    @DisplayName("Test deleting mediaItem by manager from database")
+    @DisplayName("Test DELETING mediaItem by manager from database")
     public void removeItemFromMediatheq() {
         int itemNumberThatWillBeRemoved = 3;
         showAllDatabase(mediaDatabase);
@@ -86,7 +86,7 @@ class DataTest {
     }
 
     @Test
-    @DisplayName("Test deleting mediaItem by manager from database _BAD_ID")
+    @DisplayName("Test DELETING mediaItem by manager from database _BAD_ID")
     public void removeItemFromMediatheq_BAD_ID() {
         int itemNumberThatWillBeRemoved = 14;
         showAllDatabase(mediaDatabase);
@@ -99,13 +99,31 @@ class DataTest {
 
 
     @Test
-    @DisplayName("Test of RENT the mediItems from the librabry by the User")
+    @DisplayName("Test of RENTING the mediItems from the librabry by the User")
     public void testOfrentingMediaItem(){
         int inventoryNumberOfMediaItemToRent = 2;
+        showAllDatabase(mediaDatabase);
         String message = userController.rentMediaItemByInventoryNumber(mediaDatabase, inventoryNumberOfMediaItemToRent, user);
+        showAllDatabase(mediaDatabase);
+        showAllDatabase(user.getRentedMediaItems());
         assertEquals(1, user.getRentedMediaItems().size());
+        assertEquals("Home by the sea mum rented SUCCESFULLY", message, "renting error");
 
     }
+
+    @Test
+    @DisplayName("Test of RETURNING the mediItems to the librabry by the User")
+    public void testOfreturningMediaItem(){
+        int inventoryNumberOfMediaItemToRent = 2;
+        showAllDatabase(mediaDatabase);
+        String message = userController.rentMediaItemByInventoryNumber(mediaDatabase, inventoryNumberOfMediaItemToRent, user);
+        showAllDatabase(mediaDatabase);
+        showAllDatabase(user.getRentedMediaItems());
+        assertEquals(1, user.getRentedMediaItems().size());
+        assertEquals("Home by the sea mum rented SUCCESFULLY", message, "renting error");
+
+    }
+
 
 
 
