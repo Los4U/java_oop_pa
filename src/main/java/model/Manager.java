@@ -29,4 +29,16 @@ public class Manager extends User {
     }
 
 
+    public String removeMediaItemFromDatabase(List<MediaItem> mediaDatabase, int itemNumberThatWillBeRemoved) {
+        if(itemNumberThatWillBeRemoved <= 0 || itemNumberThatWillBeRemoved > mediaDatabase.size()) {
+            return "Bad ID, check data";
+        }
+        for(MediaItem mediaItem: mediaDatabase){
+            if(mediaItem.getInventoryNumber() == itemNumberThatWillBeRemoved){
+                mediaDatabase.remove(mediaItem);
+                return mediaItem.getTitle() + " removed SUCSSESFULLY";
+            }
+        }
+        return "No item in database";
+    }
 }
