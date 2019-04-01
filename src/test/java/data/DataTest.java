@@ -26,13 +26,13 @@ class DataTest {
 
     private MediaItem book = new Book(MediaType.BOOK,"Muminki" ,"Astrid Lindgren" , LocalDate.of(1985, 1 , 1 ),  33, BookGenres.NOVEL );
     private MediaItem album = new Album(MediaType.ALBUM,"Home by the sea mum" ,"Genesis" ,LocalDate.of(1983, 10 , 3 ) , 45, AlbumGenres.ROCK);
-    private MediaItem movie = new Movie(MediaType.MOVIE,"Forest Gump" ,"Gorge Lucas" ,LocalDate.of(1990, 10 , 3 ), 112, MovieGenres.COMEDY);
+    private MediaItem itemThatWillBeRemoved = new Movie(MediaType.MOVIE,"Forest Gump" ,"Gorge Lucas" ,LocalDate.of(1990, 10 , 3 ), 112, MovieGenres.COMEDY);
 
     @BeforeEach
     void setUp() {
         mediaDatabase.add(book);
         mediaDatabase.add(album);
-        mediaDatabase.add(movie);
+        mediaDatabase.add(itemThatWillBeRemoved);
 
         manager = new Manager("Matheo");
         managerController =  new ManagerController();
@@ -66,4 +66,20 @@ class DataTest {
         assertEquals(3,  data.getMediaDatabase().size());
         assertEquals("Check the submitted date, lack of something." , message);
     }
+
+    @Test
+    @DisplayName("Test deleting mediaItem by manager from database")
+    public void removeItemFromMediatheq() {
+        int itemNumberThatWillBeRemoved = 3;
+        String message = managerController.removeMediaItemFromDatabase(mediaDatabase, itemNumberThatWillBeRemoved, manager);
+        assertEquals(2, mediaDatabase.size() , "NO");
+    }
+
+
+
+
+
+
+
+
 }
